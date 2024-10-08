@@ -30,7 +30,7 @@
  
 </head>
 
-<body class="index-page">
+<body class="about-page">
 
   <header id="header" class="header d-flex flex-column justify-content-center">
 
@@ -38,14 +38,31 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="About.html" class="active"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-        <li><a href="Portfolio.html"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
-        <li><a href="contact.html"><i class="bi bi-hdd-stack navicon"></i><span>Contact</span></a></li>
+        <li><a href="index.html" class="nav-link"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="About.html" class="nav-link"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="Portfolio.html" class="nav-link"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="contact.html" class="nav-link"><i class="bi bi-hdd-stack navicon"></i><span>Contact</span></a></li>
       </ul>
     </nav>
- 
+
   </header>
+
+  <!-- JavaScript to set active class -->
+  <script>
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPath.split('/').pop()) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+
 
   <main class="main">
 
@@ -326,8 +343,8 @@
           <div class="service-box">
             <h4>Download Catalog</h4>
             <div class="download-catalog">
-              <a href="THE SOCIAL CONNECT Rate card.pdf"><i class="THE SOCIAL CONNECT Rate card.pdf"></i><span>Catalog PDF</span></a>
-              <a href="THE SOCIAL CONNECT Rate card.pdf"><i class="THE SOCIAL CONNECT Rate card.pdf"></i><span>Catalog DOC</span></a>
+              <a href="_THE SOCIAL CONNECT Company profile.pdf"><i class="THE SOCIAL CONNECT Rate card.pdf"></i><span>Catalog PDF</span></a>
+              <a href="_THE SOCIAL CONNECT Company profile.pdf"><i class="THE SOCIAL CONNECT Rate card.pdf"></i><span>Catalog DOC</span></a>
             </div>
           </div><!-- End Services List -->
 

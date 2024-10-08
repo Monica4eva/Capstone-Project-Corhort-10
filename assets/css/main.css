@@ -39,6 +39,27 @@
   --surface-color: #252525;
   --contrast-color: #ffffff;
 }
+.active {
+  color: blue; /* Example active state style */
+  font-weight: bold;
+}
+/* Base styles for all nav links */
+.nav-link {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+/* Style for the active navigation link */
+.nav-link.active {
+  color: blue; /* Text color for active state */
+  font-weight: bold; /* Make active link bold */
+  background-color: #f0f0f0; /* Light background for active link */
+  border-bottom: 2px solid blue; /* Add bottom border to active link */
+}
+
+/* Opt
 
 /* Smooth scroll */
 :root {
@@ -262,6 +283,20 @@ h6 {
 .navmenu a:hover span,
 .navmenu li:hover>a span {
   display: block;
+}
+.navmenu ul li a.active {
+  color: pink; /* Change this to your desired active color */
+  font-weight: bold; /* Makes the active link bold */
+}
+.navmenu a {
+  color: #333; /* Default link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.navmenu a.active {
+  color: #007bff; /* Change this to your desired active color */
+  font-weight: bold; /* Makes the active link bold */
+  border-bottom: 2px solid #007bff; /* Optional: underline effect */
 }
 
 /*--------------------------------------------------------------
@@ -1444,3 +1479,5 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+ 
